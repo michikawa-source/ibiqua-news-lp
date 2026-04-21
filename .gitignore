@@ -1,0 +1,17 @@
+# 作業用ファイル
+asset-urls.txt
+download.sh
+
+# macOS
+.DS_Store
+
+# エディタ
+.vscode/
+.idea/
+
+# 空ディレクトリ
+assets/
+css/
+images/
+js/
+videos/

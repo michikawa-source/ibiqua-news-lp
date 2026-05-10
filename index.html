@@ -3841,53 +3841,7 @@ NHK出演医師が開発した『イビキュア』の秘密
       }
     },
     assignParameterToLink: function() {
-      const currentPageUri = new URI(location.href);
-      currentPageUri.removeQuery('sbrd'); // For egg cart
-      currentPageUri.removeQuery('sb_tu_id');
-      currentPageUri.removeQuery('step_uid');
-      const currentPageQueries = currentPageUri.query(true);
-
-      const aspSession = JSON.parse(document.querySelector('.js-asp-session').dataset.value)
-
-      const nodelist = document.body.querySelectorAll("a[href^=http") 
-      const node = Array.prototype.slice.call(nodelist, 0);
-      node.forEach(function(element) {
-        if (element.href.includes('tel:')) return
-        const uri = new URI(element.href);
-        uri.addQuery(currentPageQueries);
-        uri.removeQuery('squadbeyond_uid');
-        uri.addQuery('squadbeyond_uid', window.sb_visitor_id);
-        uri.removeQuery('sb_article_uid');
-        uri.addQuery('sb_article_uid', "VyQcAI_OKSq-TTzQkdOg");
-        element.href = uri.toString();
-
-        if (aspSession.session_id) {
-          const uri = new URI(element.href);
-          uri.removeQuery(aspSession.session_id);
-          uri.addQuery(aspSession.session_id, window.sb_visitor_id);
-          element.href = uri.toString();
-        }
-
-        const isRedirectLink = element.href.match(/\/redirect_pages\//) != null;
-        if (isRedirectLink) {
-          const uri = new URI(element.href);
-          uri.removeQuery('article_url');
-          uri.addQuery('article_url', window.sb_article_url);
-          element.href = uri.toString();
-        }
-
-        element.addEventListener('click', function(event) {
-          try {
-            currentPageUri.removeQuery('sb_article_uid');
-            currentPageUri.addQuery('sb_article_uid', "VyQcAI_OKSq-TTzQkdOg");
-            currentPageUri.removeQuery('sb_tu_id');
-            currentPageUri.addQuery('sb_tu_id', window.sb_visitor_id);
-            history.replaceState(null, null, currentPageUri.toString());
-          }
-          catch(e) {
-          }
-        });
-      });
+      // SquadBeyond tracking removed (YOLO自前構成移行 2026-05-10)
     },
     isAnyPartOfElementInViewport: function(element) {
       let rect = element.getBoundingClientRect();

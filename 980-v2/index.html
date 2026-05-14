@@ -4173,18 +4173,20 @@ if (hasFunnel === "true") {
 <style>
 .yolo-fcta{position:fixed;bottom:0;left:0;right:0;z-index:9999;padding:14px 12px 16px;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.88) 35%,rgba(255,255,255,0.97) 100%);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;transform:translateY(100%);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
 .yolo-fcta.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
-.yolo-fcta a{position:relative;display:flex;align-items:center;justify-content:center;max-width:580px;margin:0 auto;padding:18px 24px;background:linear-gradient(135deg,#16a34a 0%,#22c55e 50%,#15803d 100%);color:#fff!important;text-decoration:none;font-size:19px;font-weight:800;letter-spacing:0.8px;border-radius:60px;box-shadow:0 6px 20px rgba(34,197,94,0.5),0 0 0 1px rgba(255,255,255,0.18) inset,0 -2px 6px rgba(0,0,0,0.18) inset;animation:yolo-fcta-pulse 2s ease-in-out infinite;overflow:hidden;text-shadow:0 1px 2px rgba(0,0,0,0.25)}
+.yolo-fcta a{position:relative;display:flex;align-items:center;justify-content:center;max-width:580px;margin:0 auto;padding:18px 24px;background:linear-gradient(135deg,#16a34a 0%,#22c55e 50%,#15803d 100%);color:#fff!important;text-decoration:none;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Noto Sans JP","Meiryo",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-weight:900;letter-spacing:0.5px;border-radius:60px;box-shadow:0 6px 20px rgba(34,197,94,0.5),0 0 0 1px rgba(255,255,255,0.18) inset,0 -2px 6px rgba(0,0,0,0.18) inset;animation:yolo-fcta-pulse 2s ease-in-out infinite;overflow:hidden;text-shadow:0 2px 3px rgba(0,0,0,0.3),0 0 12px rgba(255,255,255,0.12)}
 .yolo-fcta a::before{content:'';position:absolute;top:0;left:-60%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.55),transparent);animation:yolo-fcta-shine 3s ease-in-out infinite;pointer-events:none;transform:skewX(-20deg)}
 .yolo-fcta a:active{animation:none;transform:translateY(2px) scale(0.99)}
-.yolo-fcta-arrow{display:inline-block;margin-left:10px;animation:yolo-fcta-bounce 1s ease-in-out infinite}
+.yolo-fcta-price{font-size:24px;font-weight:900;letter-spacing:2px;margin-right:4px}
+.yolo-fcta-here{font-size:16px;font-weight:800;letter-spacing:0.8px;opacity:0.96}
+.yolo-fcta-arrow{display:inline-block;margin-left:10px;font-size:17px;animation:yolo-fcta-bounce 1s ease-in-out infinite}
 @keyframes yolo-fcta-pulse{0%,100%{transform:scale(1);box-shadow:0 6px 20px rgba(34,197,94,0.5),0 0 0 1px rgba(255,255,255,0.18) inset,0 -2px 6px rgba(0,0,0,0.18) inset}50%{transform:scale(1.025);box-shadow:0 10px 28px rgba(34,197,94,0.7),0 0 0 1px rgba(255,255,255,0.25) inset,0 -2px 6px rgba(0,0,0,0.18) inset}}
 @keyframes yolo-fcta-shine{0%{left:-60%}60%,100%{left:130%}}
 @keyframes yolo-fcta-bounce{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
-body.has-yolo-fcta{padding-bottom:96px}
-@media (max-width:480px){.yolo-fcta a{font-size:17px;padding:15px 18px;letter-spacing:0.5px}body.has-yolo-fcta{padding-bottom:88px}}
+body.has-yolo-fcta{padding-bottom:100px}
+@media (max-width:480px){.yolo-fcta a{padding:14px 16px}.yolo-fcta-price{font-size:21px;letter-spacing:1.5px}.yolo-fcta-here{font-size:14px}.yolo-fcta-arrow{font-size:15px;margin-left:8px}body.has-yolo-fcta{padding-bottom:92px}}
 </style>
 <div class="yolo-fcta" id="yoloFcta">
-  <a href="https://81materra.jp/lp?u=yol_ibq_002_002_sc001">特別価格はこちら<span class="yolo-fcta-arrow">▶</span></a>
+  <a href="https://81materra.jp/lp?u=yol_ibq_002_002_sc001"><span class="yolo-fcta-price">特別価格</span><span class="yolo-fcta-here">はこちら</span><span class="yolo-fcta-arrow">▶</span></a>
 </div>
 <script>
 (function(){
